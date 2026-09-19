@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jet Retro Grand Prix – Rdanhel Dev</title>
+  <meta name="description" content="Jet Retro Grand Prix: digitální verze československé závodní deskové hry pro Android a desktop. Rychlost, opotřebení, riziko v zatáčkách a taktické karty.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/img/favicon.svg" alt="">Rdanhel Dev</a>
+    <nav class="nav">
+      <a href="../#projekty">Projekty</a>
+      <a href="./" aria-current="page">Jet Retro Grand Prix</a>
+    </nav>
+  </div>
+</header>
+<div class="checker" aria-hidden="true"></div>
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <span class="eyebrow">Projekt</span>
+      <h1>Jet Retro Grand Prix</h1>
+      <p class="lead">Digitální verze československé závodní deskové hry Formule I. Kostky tu neurčují pohyb, jen pokuty – o všem ostatním rozhoduje váš odhad: jak rychle jet, kdy brzdit a kolik riskovat.</p>
+      <div class="badges">
+        <span class="badge">Android</span>
+        <span class="badge">Windows / Linux</span>
+        <span class="badge">Čeština + English</span>
+        <span class="badge">1–6 jezdců, AI soupeři</span>
+      </div>
+      <div class="actions">
+        <a class="btn" href="#hra">Jak se hraje</a>
+        <a class="btn ghost" href="#stahnout">Ke stažení</a>
+      </div>
+    </div>
+
+    <section id="hra">
+      <h2>Hra v kostce</h2>
+      <p class="section-lead">Šest formulí, jedna trať a vlastní „armaturní deska“: rychlost, opotřebení pneumatik, opotřebení brzd a počítadlo okruhů.</p>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Rychlost = posun</h3>
+          <p>Jedno políčko je 30 km/h. Jedete 150 km/h? Posunete se o pět políček. Zrychlit lze nejvýš o 90 km/h za tah.</p>
+        </div>
+        <div class="card">
+          <h3>Zatáčky a riziko</h3>
+          <p>Každá zatáčka má bezpečnou rychlost. Můžete ji překročit o 30 nebo 60 km/h – pak hází kostky a doufáte, že vyjde. O 90 a více je to jistý výjezd z dráhy.</p>
+        </div>
+        <div class="card">
+          <h3>Opotřebení</h3>
+          <p>Prudké brzdění stojí opotřebení brzd a pneumatik. Když dosáhnou maxima, hra vás začne omezovat.</p>
+        </div>
+        <div class="card">
+          <h3>Blokování</h3>
+          <p>Jedno políčko, jedno auto. Pomalejší vůz před vámi vás zabrzdí – a ta brzda se počítá do opotřebení.</p>
+        </div>
+        <div class="card">
+          <h3>Depo</h3>
+          <p>Na konci okruhu můžete zajet do svého depa, vynulovat opotřebení – a vytáhnout kartu depa, která může, ale nemusí potrápit.</p>
+        </div>
+        <div class="card">
+          <h3>Taktické karty</h3>
+          <p>Každý dostane pět karet: příznivý vítr, rychlé reakce, „řídíte skvěle“ a další. Na jeden tah smíte zahrát jen jednu.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="opotrebeni">
+      <h2>Brzdění stojí opotřebení</h2>
+      <p class="section-lead">Zpomalení o 30 km/h je zadarmo. Čím prudší brzdění, tím víc se to projeví na brzdách a pneumatikách.</p>
+      <div class="card table-wrap">
+        <table>
+          <thead>
+            <tr><th>Zpomalení</th><th class="c">Opotřebení brzd</th><th class="c">Opotřebení pneumatik</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>o 30 km/h</td><td class="c">–</td><td class="c">–</td></tr>
+            <tr><td>o 60 km/h</td><td class="c">+1</td><td class="c">–</td></tr>
+            <tr><td>o 90 km/h</td><td class="c">+2</td><td class="c">+1</td></tr>
+            <tr><td>o 120 km/h</td><td class="c">+3</td><td class="c">+2</td></tr>
+            <tr><td>o 150 km/h</td><td class="c">+4</td><td class="c">+3</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-lead" style="margin-top:18px">Brzdy vydrží do 5 bodů, pneumatiky do 8. Kdo dojede na maximum, jede na hraně – a v zatáčce už odpouštět nebude nic.</p>
+    </section>
+
+    <section id="casti">
+      <h2>Tři části projektu</h2>
+      <p class="section-lead">Hra sdílí stejná pravidla, stejnou mapu a stejnou grafiku ve všech verzích.</p>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <span class="tag">Mobil</span>
+          <h3>Android aplikace</h3>
+          <p>Kotlin a Jetpack Compose. Mapa jde přibližovat a posouvat prsty, tah se skládá klepáním na políčka. Čeština i angličtina s přepínačem přímo v aplikaci.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Počítač</span>
+          <h3>Desktopová verze</h3>
+          <p>C# a Avalonia na .NET 10, běží na Windows i Linuxu. Přehled stavu všech jezdců najednou a závodní deník.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Nástroj</span>
+          <h3>Mapper</h3>
+          <p>Editor v Avaloniu, který ze skenu desky a vektorového podkladu vyrobí JSON s políčky dráhy. Z něj čerpají obě verze hry.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="stav">
+      <h2>Stav vývoje</h2>
+      <p class="section-lead">Projekt je ve vývoji – hratelná verze už existuje a je odzkoušená na tabletu.</p>
+
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Hotovo</h3>
+          <ul class="check">
+            <li>kompletní pravidla včetně pokutové tabulky a zpomalení</li>
+            <li>2D mapa s klikacími políčky a natočenými auty</li>
+            <li>samostatné depo pro každého jezdce</li>
+            <li>AI soupeři pro libovolný ze šesti slotů</li>
+            <li>taktické karty a karty depa jako skutečné balíčky</li>
+            <li>vícejazyčný závodní deník</li>
+            <li>odložený konec závodu – všichni odehrají stejný počet tahů</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Na řadě</h3>
+          <ul class="check todo">
+            <li>AI, které hraje karty a samo rozhoduje o zastávce v depu</li>
+            <li>další okruhy a mapy</li>
+            <li>vlastní ikona a vizuální identita</li>
+            <li>šampionát o více závodech (body 10–8–6–4–2–1)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="stahnout">
+      <h2>Ke stažení</h2>
+      <p class="section-lead">Hra zatím není veřejně k dispozici. Jakmile bude první veřejná verze, najdete ji právě tady.</p>
+      <div class="note">
+        Jet Retro Grand Prix je nezávislý hobby projekt inspirovaný československou deskovou hrou Formule I. Není nijak spojen s Formula One ani s dalšími ochrannými známkami – proto vlastní název a vlastní vizuální styl.
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Rdanhel Dev</span>
+    <a href="../">← Všechny projekty</a>
+  </div>
+</footer>
+
+</body>
+</html>

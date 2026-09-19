@@ -1,0 +1,152 @@
+:root {
+  --bg: #14181a;
+  --bg-2: #1b2124;
+  --panel: #222a2e;
+  --line: #34403f;
+  --text: #ece6d6;
+  --muted: #a3ac9f;
+  --red: #e0322b;
+  --red-2: #ff6a5c;
+  --green: #4bb26a;
+  --amber: #f0b429;
+  --radius: 14px;
+  --max: 1040px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--red-2); text-underline-offset: 3px; }
+a:hover { color: #fff; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+/* ---------- hlavička ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(20, 24, 26, .92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.site-header .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 60px; gap: 16px;
+}
+.brand {
+  display: flex; align-items: center; gap: 10px;
+  color: var(--text); text-decoration: none; font-weight: 700; letter-spacing: .02em;
+}
+.brand img { width: 28px; height: 28px; }
+.nav { display: flex; gap: 22px; }
+.nav a { color: var(--muted); text-decoration: none; font-size: 15px; }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--text); }
+
+/* šachovnicový pruh */
+.checker {
+  height: 14px;
+  background:
+    conic-gradient(#f4efe2 25%, #14181a 0 50%, #f4efe2 0 75%, #14181a 0) 0 0 / 28px 28px;
+  opacity: .9;
+}
+
+/* ---------- hero ---------- */
+.hero { padding: 72px 0 56px; }
+.hero.center { text-align: center; }
+.eyebrow {
+  display: inline-block; font-size: 13px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--amber); font-weight: 700; margin-bottom: 14px;
+}
+h1 { font-size: clamp(34px, 6vw, 58px); line-height: 1.08; margin: 0 0 18px; letter-spacing: -.01em; }
+h2 { font-size: clamp(24px, 3.4vw, 32px); margin: 0 0 8px; letter-spacing: -.005em; }
+h3 { font-size: 19px; margin: 0 0 6px; }
+.lead { font-size: 19px; color: var(--muted); max-width: 680px; }
+.hero.center .lead { margin-left: auto; margin-right: auto; }
+
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; }
+.hero.center .badges { justify-content: center; }
+.badge {
+  font-size: 13px; padding: 4px 12px; border-radius: 999px;
+  background: var(--panel); border: 1px solid var(--line); color: var(--muted);
+}
+
+.btn {
+  display: inline-block; padding: 11px 22px; border-radius: 10px; font-weight: 600;
+  text-decoration: none; background: var(--red); color: #fff; border: 1px solid var(--red);
+}
+.btn:hover { background: var(--red-2); border-color: var(--red-2); color: #fff; }
+.btn.ghost { background: transparent; color: var(--text); border-color: var(--line); }
+.btn.ghost:hover { border-color: var(--muted); background: var(--panel); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+/* ---------- sekce ---------- */
+section { padding: 44px 0; }
+section + section { border-top: 1px solid var(--line); }
+.section-lead { color: var(--muted); max-width: 680px; margin: 0 0 28px; }
+
+.grid { display: grid; gap: 18px; }
+.grid.cols-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.grid.cols-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+.card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 22px;
+}
+.card p { margin: 0; color: var(--muted); font-size: 16px; }
+.card .tag { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--amber); font-weight: 700; }
+
+/* karta projektu na úvodní stránce */
+a.project {
+  display: block; text-decoration: none; color: inherit; overflow: hidden; padding: 0;
+  transition: transform .15s, border-color .15s;
+}
+a.project:hover { transform: translateY(-3px); border-color: var(--red); }
+a.project .thumb {
+  height: 150px; background: #103a26; position: relative; border-bottom: 1px solid var(--line);
+}
+a.project .thumb svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+a.project .body { padding: 20px 22px 22px; }
+a.project h3 { color: var(--text); font-size: 22px; }
+a.project .more { display: inline-block; margin-top: 12px; color: var(--red-2); font-weight: 600; font-size: 15px; }
+.card.soon { border-style: dashed; background: transparent; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 240px; }
+
+/* číselné "fakta" */
+.fact { text-align: center; }
+.fact .num { font-size: 40px; font-weight: 800; color: var(--red-2); line-height: 1.1; }
+.fact .cap { color: var(--muted); font-size: 15px; margin-top: 6px; }
+
+/* ---------- tabulky ---------- */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 16px; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+th { color: var(--amber); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+td.c, th.c { text-align: center; }
+
+/* ---------- seznamy ---------- */
+ul.check { list-style: none; padding: 0; margin: 12px 0 0; }
+ul.check li { padding-left: 26px; position: relative; margin: 6px 0; color: var(--muted); }
+ul.check li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+ul.todo li::before { content: "○"; color: var(--amber); }
+
+.note {
+  background: var(--bg-2); border-left: 3px solid var(--amber); border-radius: 6px;
+  padding: 14px 18px; color: var(--muted); font-size: 15px;
+}
+
+/* ---------- patička ---------- */
+.site-footer { border-top: 1px solid var(--line); padding: 30px 0 44px; color: var(--muted); font-size: 14px; }
+.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .hero { padding: 48px 0 36px; }
+  .nav { gap: 14px; }
+}
