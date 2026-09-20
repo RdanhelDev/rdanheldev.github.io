@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jet Golf Companion – Rdanhel Dev</title>
+  <meta name="description" content="Android aplikace pro golfisty: změřte z fotky rychlost greenu i vzdálenosti míčků, skórujte kolo v Brutto i Netto podle WHS a analyzujte kola z Garminu. Vše offline.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/img/favicon.svg" alt="">Rdanhel Dev</a>
+    <nav class="nav">
+      <a href="../#projekty">Projekty</a>
+      <a href="./" aria-current="page">Jet Golf Companion</a>
+    </nav>
+  </div>
+</header>
+<div class="checker" aria-hidden="true"></div>
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <span class="eyebrow">Pomocník na golfu · Android</span>
+      <h1>Změřte green, spočítejte kolo, mějte statistiku pod kontrolou.</h1>
+      <p class="lead">Jet Golf Companion je nativní Android aplikace, která z běžné fotky pomocí AI detekce míčků změří rychlost greenu i vzdálenosti mezi míčky, vede evidenci hráčů a hřišť a umožní odehrát a oskórovat celé kolo v systému Brutto i férové Netto podle pravidel EGA/WHS. Navíc naimportuje a vyhodnotí kola z hodinek Garmin, kreslí rány podle GPS na mapy jamek a všechna data zálohuje do jediného souboru – takže veškerou svou golfovou statistiku máte offline na jednom místě.</p>
+      <div class="badges">
+        <span class="badge">Android</span>
+        <span class="badge">Vše offline</span>
+        <span class="badge">Bez účtu a bez reklam</span>
+        <span class="badge">Čeština + English</span>
+      </div>
+      <div class="actions">
+        <a class="btn" href="#stahnout">Stáhnout aplikaci</a>
+        <a class="btn ghost" href="#funkce">Co všechno umí</a>
+      </div>
+    </div>
+
+    <section id="screenshoty">
+      <div class="shots">
+        <figure><img src="../assets/img/jetgolfcompanion/mereni-greenu.png" width="1350" height="2400" loading="lazy" alt="Měření greenu – rozcestník se Stimpmeter testem a rychlým měřením vzdáleností"><figcaption>Měření greenu</figcaption></figure>
+        <figure><img src="../assets/img/jetgolfcompanion/zapis-jamky.png" width="1350" height="2400" loading="lazy" alt="Rozehraná hra – zápis jamky"><figcaption>Zápis jamky</figcaption></figure>
+        <figure><img src="../assets/img/jetgolfcompanion/skorekarta-netto.png" width="1350" height="2400" loading="lazy" alt="Skórekarta hry s Netto statistikami"><figcaption>Skórekarta s Netto</figcaption></figure>
+        <figure><img src="../assets/img/jetgolfcompanion/detail-hriste.png" width="1350" height="2400" loading="lazy" alt="Detail hřiště se skórekartou"><figcaption>Detail hřiště</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="funkce">
+      <h2>Osm nástrojů pro jednu hru</h2>
+      <p class="section-lead">Každý modul funguje samostatně. Nemusíte použít všechny – klidně jen měřič greenu, jen skórování, nebo jen archiv kol z Garminu.</p>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Rychlost greenu</h3>
+          <p>Dvoukrokový Stimpmeter postup: dvě fotky dojezdu, AI najde míčky, aplikace spočítá oficiální Stimp se sklonovou korekcí.</p>
+        </div>
+        <div class="card">
+          <h3>Vzdálenosti míčků</h3>
+          <p>Z jedné fotky. Skutečný průměr golfového míčku 42,67 mm slouží jako měřítko pixelů na milimetry.</p>
+        </div>
+        <div class="card">
+          <h3>Hráči a bag</h3>
+          <p>Profily hráčů s handicapem a kontrola bagu podle pravidla 14 holí (R&amp;A/USGA).</p>
+        </div>
+        <div class="card">
+          <h3>Hřiště</h3>
+          <p>Ruční zadání, import z CSV nebo stažení scorekaret z cgf.cz podle odkazu – volitelně s mapami jamek.</p>
+        </div>
+        <div class="card">
+          <h3>Hra a skóre</h3>
+          <p>Odehrajte celé kolo s GPS ranami. Brutto i férové Netto podle EGA/WHS – Netto Par, GIR, scrambling, up&amp;down.</p>
+        </div>
+        <div class="card">
+          <h3>Import z Garminu</h3>
+          <p>Ručně exportovaný <code>golf-export.json</code> z Garmin Connect. Kola se slučují a nikdy nepřepisují.</p>
+        </div>
+        <div class="card">
+          <h3>Mapy jamek a GPS</h3>
+          <p>Georeferencovaný obrázek jamky se zónami. Každá rána se vykreslí podle GPS s odvozeným klubem, délkou a povrchem.</p>
+        </div>
+        <div class="card">
+          <h3>Záloha dat</h3>
+          <p>Jeden JSON soubor s kompletními daty. Uložte si ho třeba na Google Disk a obnovte po přeinstalování.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="green">
+      <span class="eyebrow">Stimpmeter</span>
+      <h2>Rychlost greenu za dvě fotky</h2>
+      <div class="split">
+        <div>
+          <p>Postavíte stimpmetr, necháte míček dojet a vyfotíte, kde se zastavil. Totéž v protisměru. AI detektor najde na obou fotkách míčky, aplikace změří dojezdovou vzdálenost a zkombinuje oba směry Brede formulí pro kompenzaci sklonu do jednoho oficiálního čtení Stimp.</p>
+          <ul class="check">
+            <li>Kalibrační koeficient pro nestandardní (doma vyrobenou) rampu – výsledek zůstane srovnatelný se standardní USGA rampou.</li>
+            <li>Použitý koeficient se ukládá ke každému měření pro pozdější referenci.</li>
+            <li>Historie měření greenů s datem a hodnotou.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Referenční hodnoty</h3>
+          <ul>
+            <li>Průměr míčku <b>42,67 mm</b></li>
+            <li>Standardní USGA rampa <b>91,4 cm / 20°</b></li>
+            <li>Kompenzace sklonu <b>Brede</b></li>
+            <li>Výchozí koeficient rampy <b>1.0</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="vzdalenosti">
+      <span class="eyebrow">Rychlé měření</span>
+      <h2>Vzdálenosti míčků z jedné fotky</h2>
+      <div class="split">
+        <div>
+          <p>Vyfotíte skupinu míčků, ťuknete na referenční míček a aplikace ukáže vzdálenosti ke všem ostatním. Měřítko odvozuje ze skutečného průměru míčku, takže nepotřebujete žádnou kartičku ani metr v záběru.</p>
+          <ul class="check">
+            <li>Ideální na tréninkové drily – kruhy okolo jamky, rozestupy, přesnost patování.</li>
+            <li>Tap-to-select: referenční míček i cíle vybíráte přímo v náhledu fotky.</li>
+            <li>Funguje offline, přímo z fotoaparátu telefonu.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Jak to počítá</h3>
+          <ul>
+            <li>Měřítko <b>42,67 mm = ⌀ míčku</b></li>
+            <li>Vstup <b>1 fotka</b></li>
+            <li>Výstup <b>vzdálenosti v mm/cm</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skore">
+      <span class="eyebrow">Hra a skóre</span>
+      <h2>Odehrajte a oskórujte celé kolo</h2>
+      <div class="split">
+        <div>
+          <p>Živá hra vede skóre po jamkách, zaznamenává GPS pozici každé rány a na mapě jamky z ní odvozuje klub, vzdálenost k další ráně a povrch dopadu (fairway, green, rough, voda). Vedle hrubého Brutto skóre počítá i férové Netto, které podle obdržených ran na jamku srovnává hráče s různým handicapem.</p>
+          <ul class="check">
+            <li>Playing Handicap a rány na jamku z Course/Slope Ratingu, včetně převodu 9jamkového hřiště na 18jamkový rating.</li>
+            <li>Rozdělení ran podle Stroke Indexu.</li>
+            <li>Netto statistiky: Par, GIR, FIR SR, Scrambling, Up&amp;Down, Bogey Save, Full Game.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Pravidla</h3>
+          <ul>
+            <li>Handicapový systém <b>EGA / WHS</b></li>
+            <li>Bag <b>max. 14 holí</b></li>
+            <li>Skórování <b>Brutto + Netto</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="garmin">
+      <span class="eyebrow">Garmin</span>
+      <h2>Kola z hodinek na jednom místě</h2>
+      <div class="split">
+        <div>
+          <p>Archiv kol z Garmin ekosystému je nezávislý na hrách odehraných v aplikaci. Stáhnete si z Garmin Connect <code>golf-export.json</code>, naimportujete ho a kola se sloučí podle <code>scorecardId</code> – už jednou naimportované kolo se nikdy nepřepíše.</p>
+          <ul class="check">
+            <li>Přiřazení lokálního klubu a hřiště k Garmin ID – import pak zobrazí skutečné názvy klubů a GPS rány na mapě.</li>
+            <li>Ručně zadaný handicap a pohlaví u kola – Netto skóre stejnou logikou jako pro hry v aplikaci.</li>
+            <li>Analýza her sčítá hry z aplikace i kola z Garminu jednotně v jedné obrazovce.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Import</h3>
+          <ul>
+            <li>Zdroj <b>golf-export.json</b></li>
+            <li>Slučování <b>dle scorecardId</b></li>
+            <li>Přepis kol <b>nikdy</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="soukromi">
+      <span class="eyebrow">Soukromí</span>
+      <h2>Vaše data zůstávají ve vašem telefonu</h2>
+      <p class="section-lead" style="margin-bottom:14px">Aplikace nespoléhá na cloud ani na automatickou zálohu Androidu / Googlu. Všechno běží lokálně, bez účtu a bez přihlašování. Když chcete data přenést, exportujete je do jednoho JSON souboru a ten si uložíte, kam chcete. Obnova kompletně nahradí aktuální data obsahem zálohy – ale nikdy nesmaže mapy jamek, které jste si nakreslili lokálně.</p>
+      <p><a href="../zasady-ochrany-osobnich-udaju/#jet-golf-companion">Zásady ochrany osobních údajů →</a></p>
+    </section>
+
+    <section id="jak-zacit">
+      <span class="eyebrow">Jak začít</span>
+      <h2>Tři kroky k první statistice</h2>
+      <div class="steps" style="margin-top:22px">
+        <div class="card">
+          <h3>Nainstalujte</h3>
+          <p>Stáhněte aplikaci do telefonu s Androidem a fotoaparátem. Žádná registrace.</p>
+        </div>
+        <div class="card">
+          <h3>Přidejte hráče a hřiště</h3>
+          <p>Vytvořte profil hráče a přidejte hřiště ručně, z CSV nebo stažením scorekarty z cgf.cz.</p>
+        </div>
+        <div class="card">
+          <h3>Měřte nebo hrajte</h3>
+          <p>Změřte green dvěma fotkami, nebo spusťte živou hru a skórujte celé kolo s GPS ranami.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>Časté dotazy</h2>
+      <div style="margin-top:18px">
+        <details class="faq"><summary>Potřebuji připojení k internetu?</summary>
+          <p>Pro samotné měření, skórování i analýzu ne – vše funguje offline. Internet je potřeba jen při stahování scorekaret z cgf.cz.</p></details>
+        <details class="faq"><summary>Musím mít oficiální stimpmetr?</summary>
+          <p>Ne. Pro nestandardní nebo doma vyrobenou rampu zadáte kalibrační koeficient a výsledek zůstane srovnatelný se standardní USGA rampou.</p></details>
+        <details class="faq"><summary>Jaký telefon potřebuji?</summary>
+          <p>Android telefon s fotoaparátem. AI detekce míčků běží přímo v telefonu.</p></details>
+        <details class="faq"><summary>Nahrají se moje data někam na server?</summary>
+          <p>Ne. Aplikace nemá cloud ani účet. Data přenesete jen ručně přes zálohovací JSON soubor, který si spravujete sami.</p></details>
+        <details class="faq"><summary>Napojuje se přímo na Garmin Connect?</summary>
+          <p>Ne přes API. Z Garmin Connect si ručně stáhnete soubor <code>golf-export.json</code> a ten do aplikace naimportujete.</p></details>
+      </div>
+    </section>
+
+    <section id="stahnout">
+      <h2>Ke stažení</h2>
+      <p class="section-lead">Aplikace je aktuálně v uzavřeném testování na Google Play. Odkaz na veřejné vydání přidám sem, jakmile bude dostupné.</p>
+      <div class="actions" style="margin-top:0">
+        <a class="btn ghost" href="../files/Jet-Golf-Companion-manual.pdf">Uživatelská příručka (PDF)</a>
+        <a class="btn ghost" href="../zasady-ochrany-osobnich-udaju/#jet-golf-companion">Zásady ochrany osobních údajů</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Rdanhel Dev · <a href="../zasady-ochrany-osobnich-udaju/">Zásady ochrany osobních údajů</a></span>
+    <a href="../">← Všechny projekty</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -141,6 +141,45 @@ ul.todo li::before { content: "○"; color: var(--amber); }
   padding: 14px 18px; color: var(--muted); font-size: 15px;
 }
 
+/* ---------- dvousloupcový detail (text + postranní karta) ---------- */
+.split { display: grid; gap: 22px; grid-template-columns: 1.6fr 1fr; align-items: start; }
+.split .card ul { list-style: none; padding: 0; margin: 10px 0 0; }
+.split .card li { display: flex; justify-content: space-between; gap: 14px; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--muted); }
+.split .card li:last-child { border-bottom: 0; }
+.split .card li b { color: var(--text); font-weight: 600; text-align: right; }
+.split p { margin: 0 0 10px; color: var(--muted); }
+
+/* ---------- screenshoty z aplikace ---------- */
+.shots { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.shots figure { margin: 0; }
+.shots img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); background: var(--bg-2); }
+.shots figcaption { margin-top: 8px; font-size: 14px; color: var(--muted); text-align: center; }
+
+/* ---------- kroky a FAQ ---------- */
+.steps { counter-reset: step; display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.steps .card { counter-increment: step; }
+.steps .card h3::before {
+  content: counter(step); display: inline-block; width: 28px; height: 28px; line-height: 28px; text-align: center;
+  margin-right: 10px; border-radius: 50%; background: var(--red); color: #fff; font-size: 15px;
+}
+details.faq { border-bottom: 1px solid var(--line); padding: 14px 0; }
+details.faq summary { cursor: pointer; font-weight: 600; }
+details.faq p { margin: 10px 0 0; color: var(--muted); }
+
+/* ---------- dlouhý text (zásady ochrany osobních údajů) ---------- */
+.prose { max-width: 760px; }
+.prose h2 { margin-top: 8px; }
+.prose h3 { margin: 30px 0 8px; color: var(--amber); font-size: 17px; letter-spacing: .02em; }
+.prose p, .prose li { color: var(--muted); }
+.prose p { margin: 0 0 12px; }
+.prose ul { padding-left: 22px; margin: 0 0 14px; }
+.prose li { margin: 5px 0; }
+.prose strong { color: var(--text); }
+.prose .meta { color: var(--muted); font-size: 15px; margin: 0 0 6px; }
+.toc { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 8px; padding: 0; list-style: none; }
+.toc a { display: inline-block; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); text-decoration: none; font-size: 15px; }
+.toc a:hover { border-color: var(--muted); }
+
 /* ---------- patička ---------- */
 .site-footer { border-top: 1px solid var(--line); padding: 30px 0 44px; color: var(--muted); font-size: 14px; }
 .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
@@ -149,4 +188,7 @@ ul.todo li::before { content: "○"; color: var(--amber); }
   body { font-size: 16px; }
   .hero { padding: 48px 0 36px; }
   .nav { gap: 14px; }
+}
+@media (max-width: 760px) {
+  .split { grid-template-columns: 1fr; }
 }
