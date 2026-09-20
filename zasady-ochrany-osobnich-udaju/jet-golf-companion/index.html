@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zásady ochrany osobních údajů – Jet Golf Companion</title>
+  <meta name="description" content="Zásady ochrany osobních údajů aplikace Jet Golf Companion. Aplikace neshromažďuje, neodesílá ani nesdílí žádné osobní údaje.">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<!--NAV-->
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../"><img src="../../assets/img/favicon.svg" alt="">Rdanhel Dev</a>
+    <label for="nav-toggle" class="burger" aria-hidden="true"><span></span></label>
+  </div>
+</header>
+<nav class="sidebar" aria-label="Hlavní menu">
+  <a class="brand" href="../../"><img src="../../assets/img/favicon.svg" alt="">Rdanhel Dev</a>
+  <a href="../../">Domů</a>
+  <span class="group">Projekty</span>
+  <a class="sub" href="../../jetretrograndprix/">Jet Retro Grand Prix</a>
+  <a class="sub" href="../../jetgolfcompanion/">Jet Golf Companion</a>
+  <span class="group">Soukromí</span>
+  <a class="sub" href="../../zasady-ochrany-osobnich-udaju/">Přehled zásad</a>
+  <a class="sub" href="../../zasady-ochrany-osobnich-udaju/jet-retro-grand-prix/">Jet Retro Grand Prix</a>
+  <a class="sub" href="../../zasady-ochrany-osobnich-udaju/jet-golf-companion/" aria-current="page">Jet Golf Companion</a>
+  <span class="group">Odkazy</span>
+  <a class="sub" href="https://github.com/RdanhelDev">GitHub</a>
+</nav>
+<label for="nav-toggle" class="scrim"></label>
+<div class="checker" aria-hidden="true"></div>
+<!--/NAV-->
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <span class="eyebrow">Mobilní aplikace</span>
+      <h1>Zásady ochrany osobních údajů – Jet Golf Companion</h1>
+      <p class="lead">Aplikace Jet Golf Companion (Pomocník na golfu) pro Android. <a href="../">Zásady pro další aplikace a web</a> · <a href="../../jetgolfcompanion/">O aplikaci</a></p>
+    </div>
+
+    <div class="prose">
+      <p class="meta"><strong>Správce údajů:</strong> Rostislav Danhel (Rdanhel Dev), kontakt: <a href="mailto:rdanhel.dev@gmail.com">rdanhel.dev@gmail.com</a></p>
+      <p class="meta"><strong>Účinnost od:</strong> 2. 9. 2026</p>
+    </div>
+
+    <section class="prose" style="border-top:0">
+
+      <h3>Shrnutí</h3>
+      <p>Aplikace <strong>neshromažďuje, neodesílá ani nesdílí žádné osobní údaje</strong>. Nemá uživatelské účty, nevyžaduje registraci ani přihlášení a neprovozuje žádný server. Všechna data, která v aplikaci vzniknou nebo je do ní zadáte, zůstávají <strong>výhradně ve vašem zařízení</strong>. Vývojář k nim nemá přístup.</p>
+
+      <h3>Jaká data aplikace zpracovává (lokálně ve vašem zařízení)</h3>
+      <p>Následující údaje ukládá aplikace pouze do úložiště vašeho telefonu (interní <code>SharedPreferences</code> a soubory aplikace). Neopouštějí zařízení, pokud je sami neexportujete:</p>
+      <ul>
+        <li><strong>Profily hráčů</strong> – jméno, přezdívka, handicap, pohlaví, složení bagu.</li>
+        <li><strong>Hřiště</strong> – názvy, jamky, pary, ratingy, volitelně mapy jamek.</li>
+        <li><strong>Hry a skóre</strong> – průběh kola, skóre po jamkách, statistiky Brutto/Netto.</li>
+        <li><strong>Poloha (GPS)</strong> – souřadnice jednotlivých ran zaznamenané během kola, uložené spolu s hrou a zobrazené na mapě jamky.</li>
+        <li><strong>Fotografie</strong> – snímky pořízené fotoaparátem pro měření rychlosti greenu a vzdálenosti míčků. Analýza (detekce míčků) probíhá <strong>přímo v zařízení</strong> pomocí knihovny TensorFlow Lite. Snímky se nikam neodesílají.</li>
+        <li><strong>Historie měření greenů</strong> – naměřené hodnoty Stimp, datum, použitý koeficient rampy.</li>
+        <li><strong>Data importovaná z Garminu</strong> – kola, rány a skóre z ručně staženého souboru <code>golf-export.json</code>, dále přiřazení klubů a hřišť a ručně zadaný handicap/pohlaví k jednotlivým kolům.</li>
+        <li><strong>Provozní protokoly (logy)</strong> – technický soubor <code>app_logs.txt</code> v úložišti aplikace pro řešení chyb. Zobrazit či sdílet ho lze pouze na váš pokyn v aplikaci.</li>
+      </ul>
+
+      <h3>Oprávnění aplikace a proč je potřebuje</h3>
+      <ul>
+        <li><strong>Fotoaparát</strong> – pořízení snímků míčků pro měření. Snímky se zpracují lokálně.</li>
+        <li><strong>Poloha (přesná i přibližná)</strong> – záznam pozice ran během kola a jejich zobrazení na mapě jamky.</li>
+        <li><strong>Služba na popředí / poloha na popředí + oznámení</strong> – aby průběžné zaznamenávání GPS fungovalo po celou dobu kola i při zhasnutém displeji; po dobu sledování je zobrazeno trvalé oznámení. Poloha se sleduje jen během aktivního kola, nikoli na pozadí mimo hru.</li>
+        <li><strong>Internet</strong> – viz níže; využívá se pouze pro stažení veřejných scorekaret z webu cgf.cz na váš výslovný pokyn.</li>
+      </ul>
+
+      <h3>Připojení k internetu</h3>
+      <p>Aplikace naváže spojení s internetem v jediném případě: když do ní <strong>sami vložíte odkaz na scorekartu na webu cgf.cz</strong> a spustíte její stažení. Požadavek pak směřuje na servery Českého golfového svazu (cgf.cz); těm se – jako při každé návštěvě webu – zpřístupní IP adresa vašeho zařízení. Aplikace přitom <strong>neodesílá žádné vaše osobní údaje</strong> ani obsah z aplikace.</p>
+      <p>Aplikace <strong>neobsahuje</strong> reklamy, analytické nástroje (např. Google Analytics, Firebase), nástroje pro hlášení pádů ani žádné sledovací SDK třetích stran.</p>
+      <p>Komunikace s hodinkami Garmin probíhá přes aplikaci <strong>Garmin Connect nainstalovanou ve vašem telefonu</strong> (Connect IQ Mobile SDK), nikoli přímým spojením aplikace se servery Garmin.</p>
+
+      <h3>Záloha a přenos dat</h3>
+      <ul>
+        <li><strong>Ruční záloha (v aplikaci)</strong> – můžete si veškerá data vyexportovat do jednoho souboru JSON a ten si uložit, kam chcete (např. na Google Disk). Kam soubor uložíte a kdo k němu má přístup, se řídí podmínkami vámi zvolené služby, ne těmito zásadami. Import zálohy přepíše aktuální data obsahem souboru.</li>
+        <li><strong>Systémová záloha Androidu</strong> – aplikace má povolenou automatickou zálohu systému Android. Pokud máte v telefonu zapnuté zálohování do Googlu, může operační systém zkopírovat data aplikace do vašeho vlastního účtu Google. Tuto zálohu spravuje Google podle svých podmínek; vývojář k ní nemá přístup. Zálohování lze v nastavení telefonu vypnout.</li>
+      </ul>
+
+      <h3>Sdílení s třetími stranami</h3>
+      <p>Vývojář nesdílí žádná data s třetími stranami, protože k nim nemá přístup. K přenosu dat mimo zařízení dojde jen tehdy, když nějakou funkci sami použijete – stažení scorekarty z cgf.cz, uložení zálohy na cloudové úložiště, sdílení logu nebo zálohy přes jinou aplikaci. V takovém případě platí zásady příslušné služby.</p>
+
+      <h3>Zabezpečení údajů</h3>
+      <ul>
+        <li>Data jsou uložena v <strong>soukromém úložišti aplikace</strong>, které není přístupné jiným aplikacím; na moderních zařízeních je úložiště šifrováno na úrovni systému Android.</li>
+        <li>Aplikace <strong>neprovozuje žádný server</strong> ani cloudovou databázi, takže odpadá riziko úniku dat na straně poskytovatele.</li>
+        <li>Jediný síťový požadavek (stažení scorekarty z cgf.cz) směřuje na veřejný web a neobsahuje žádné přihlašovací údaje ani obsah z aplikace. Používá se standardní síťová vrstva systému Android včetně šifrování HTTPS/TLS tam, kde je server cgf.cz poskytuje.</li>
+        <li>Při sdílení souboru (protokol, záloha) uděluje aplikace přes <code>FileProvider</code> pouze dočasné oprávnění té aplikaci, kterou k tomu sami vyberete.</li>
+        <li>Doporučujeme zabezpečit zařízení zámkem obrazovky a zálohu JSON ukládat jen na důvěryhodné místo.</li>
+      </ul>
+
+      <h3>Děti</h3>
+      <p>Aplikace není určena dětem a cíleně od nich neshromažďuje žádné údaje. Neshromažďuje je ostatně od nikoho.</p>
+
+      <h3>Doba uchování a výmaz</h3>
+      <p>Data jsou ve vašem zařízení, dokud je nesmažete vy. Odstraníte je:</p>
+      <ul>
+        <li>v aplikaci (smazání konkrétních hráčů, hřišť, her, měření), nebo</li>
+        <li>vymazáním dat aplikace v nastavení Androidu, nebo</li>
+        <li>odinstalováním aplikace (odstraní se veškerá lokální data i logy).</li>
+      </ul>
+      <p>Případnou systémovou zálohu smažete ve správě zálohování svého účtu Google.</p>
+
+      <h3>Vaše práva podle GDPR</h3>
+      <p>Protože vývojář žádné vaše osobní údaje nezpracovává ani k nim nemá přístup, nemůže vyřídit žádost o výpis, opravu ani výmaz „na dálku“ – tyto úkony provádíte přímo ve svém zařízení výše popsanými postupy. Přesto máte podle nařízení GDPR tato práva a s dotazy se můžete obrátit na <a href="mailto:rdanhel.dev@gmail.com">rdanhel.dev@gmail.com</a>:</p>
+      <ul>
+        <li>právo odvolat souhlas,</li>
+        <li>právo na přístup,</li>
+        <li>právo na výmaz,</li>
+        <li>právo na opravu,</li>
+        <li>právo na přenositelnost údajů,</li>
+        <li>právo vznést námitku,</li>
+        <li>oznámení o porušení zabezpečení údajů,</li>
+        <li>právo podat stížnost u dozorového úřadu (<a href="https://uoou.gov.cz/">Úřad pro ochranu osobních údajů</a>).</li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Rdanhel Dev · <a href="../">Všechny zásady</a></span>
+    <a href="../../jetgolfcompanion/">← Jet Golf Companion</a>
+  </div>
+</footer>
+
+</body>
+</html>

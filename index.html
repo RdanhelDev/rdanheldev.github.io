@@ -10,16 +10,30 @@
 </head>
 <body>
 
+<!--NAV-->
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu">
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="./"><img src="assets/img/favicon.svg" alt="">Rdanhel Dev</a>
-    <nav class="nav">
-      <a href="#projekty">Projekty</a>
-      <a href="#o-webu">O webu</a>
-    </nav>
+    <label for="nav-toggle" class="burger" aria-hidden="true"><span></span></label>
   </div>
 </header>
+<nav class="sidebar" aria-label="Hlavní menu">
+  <a class="brand" href="./"><img src="assets/img/favicon.svg" alt="">Rdanhel Dev</a>
+  <a href="./" aria-current="page">Domů</a>
+  <span class="group">Projekty</span>
+  <a class="sub" href="jetretrograndprix/">Jet Retro Grand Prix</a>
+  <a class="sub" href="jetgolfcompanion/">Jet Golf Companion</a>
+  <span class="group">Soukromí</span>
+  <a class="sub" href="zasady-ochrany-osobnich-udaju/">Přehled zásad</a>
+  <a class="sub" href="zasady-ochrany-osobnich-udaju/jet-retro-grand-prix/">Jet Retro Grand Prix</a>
+  <a class="sub" href="zasady-ochrany-osobnich-udaju/jet-golf-companion/">Jet Golf Companion</a>
+  <span class="group">Odkazy</span>
+  <a class="sub" href="https://github.com/RdanhelDev">GitHub</a>
+</nav>
+<label for="nav-toggle" class="scrim"></label>
 <div class="checker" aria-hidden="true"></div>
+<!--/NAV-->
 
 <main>
   <div class="wrap">
@@ -86,7 +100,7 @@
     <section id="o-webu">
       <h2>O webu</h2>
       <p class="section-lead">Pod přezdívkou Jet5et vytvářím malé, praktické Android aplikace, které mají jediný cíl, zjednodušit každodenní život. Moje aplikace nejsou hry, nejsou přeplácené, nejsou zahlcené reklamami. Jsou to jednoduché nástroje, které mají pomoci tam, kde ostatní aplikace bývají zbytečně složité.</p>
-      <p class="section-lead">Statický web bez sledování a bez cookies. Každý projekt má vlastní stránku s popisem, stavem vývoje a plány. <a href="zasady-ochrany-osobnich-udaju/">Zásady ochrany osobních údajů</a> pro všechny aplikace jsou na jedné stránce.</p>
+      <p class="section-lead">Statický web bez sledování a bez cookies. Každý projekt má vlastní stránku s popisem, stavem vývoje a plány. <a href="zasady-ochrany-osobnich-udaju/">Zásady ochrany osobních údajů</a> mají všechny aplikace zvlášť, pohromadě je najdete v přehledu.</p>
     </section>
 
   </div>

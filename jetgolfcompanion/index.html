@@ -10,16 +10,30 @@
 </head>
 <body>
 
+<!--NAV-->
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu">
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../"><img src="../assets/img/favicon.svg" alt="">Rdanhel Dev</a>
-    <nav class="nav">
-      <a href="../#projekty">Projekty</a>
-      <a href="./" aria-current="page">Jet Golf Companion</a>
-    </nav>
+    <label for="nav-toggle" class="burger" aria-hidden="true"><span></span></label>
   </div>
 </header>
+<nav class="sidebar" aria-label="Hlavní menu">
+  <a class="brand" href="../"><img src="../assets/img/favicon.svg" alt="">Rdanhel Dev</a>
+  <a href="../">Domů</a>
+  <span class="group">Projekty</span>
+  <a class="sub" href="../jetretrograndprix/">Jet Retro Grand Prix</a>
+  <a class="sub" href="../jetgolfcompanion/" aria-current="page">Jet Golf Companion</a>
+  <span class="group">Soukromí</span>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/">Přehled zásad</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-retro-grand-prix/">Jet Retro Grand Prix</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-golf-companion/">Jet Golf Companion</a>
+  <span class="group">Odkazy</span>
+  <a class="sub" href="https://github.com/RdanhelDev">GitHub</a>
+</nav>
+<label for="nav-toggle" class="scrim"></label>
 <div class="checker" aria-hidden="true"></div>
+<!--/NAV-->
 
 <main>
   <div class="wrap">
@@ -186,7 +200,7 @@
       <span class="eyebrow">Soukromí</span>
       <h2>Vaše data zůstávají ve vašem telefonu</h2>
       <p class="section-lead" style="margin-bottom:14px">Aplikace nespoléhá na cloud ani na automatickou zálohu Androidu / Googlu. Všechno běží lokálně, bez účtu a bez přihlašování. Když chcete data přenést, exportujete je do jednoho JSON souboru a ten si uložíte, kam chcete. Obnova kompletně nahradí aktuální data obsahem zálohy – ale nikdy nesmaže mapy jamek, které jste si nakreslili lokálně.</p>
-      <p><a href="../zasady-ochrany-osobnich-udaju/#jet-golf-companion">Zásady ochrany osobních údajů →</a></p>
+      <p><a href="../zasady-ochrany-osobnich-udaju/jet-golf-companion/">Zásady ochrany osobních údajů →</a></p>
     </section>
 
     <section id="jak-zacit">
@@ -229,7 +243,7 @@
       <p class="section-lead">Aplikace je aktuálně v uzavřeném testování na Google Play. Odkaz na veřejné vydání přidám sem, jakmile bude dostupné.</p>
       <div class="actions" style="margin-top:0">
         <a class="btn ghost" href="../files/Jet-Golf-Companion-manual.pdf">Uživatelská příručka (PDF)</a>
-        <a class="btn ghost" href="../zasady-ochrany-osobnich-udaju/#jet-golf-companion">Zásady ochrany osobních údajů</a>
+        <a class="btn ghost" href="../zasady-ochrany-osobnich-udaju/jet-golf-companion/">Zásady ochrany osobních údajů</a>
       </div>
     </section>
 
@@ -238,7 +252,7 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <span>© 2026 Rdanhel Dev · <a href="../zasady-ochrany-osobnich-udaju/">Zásady ochrany osobních údajů</a></span>
+    <span>© 2026 Rdanhel Dev · <a href="../zasady-ochrany-osobnich-udaju/jet-golf-companion/">Zásady ochrany osobních údajů</a></span>
     <a href="../">← Všechny projekty</a>
   </div>
 </footer>
