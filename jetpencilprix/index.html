@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JetPencilPrix – Rdanhel Dev</title>
+  <meta name="description" content="JetPencilPrix: digitální verze klasické hry Formule na čtverečkovaném papíře pro Android. Žádné kostky – jen odhad rychlosti a setrvačnosti ve vektorovém závodění.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<!--NAV-->
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/img/favicon.svg" alt="">Rdanhel Dev</a>
+    <label for="nav-toggle" class="burger" aria-hidden="true"><span></span></label>
+  </div>
+</header>
+<nav class="sidebar" aria-label="Hlavní menu">
+  <a class="brand" href="../"><img src="../assets/img/favicon.svg" alt="">Rdanhel Dev</a>
+  <a href="../">Domů</a>
+  <span class="group">Projekty</span>
+  <a class="sub" href="../jetretrograndprix/">Jet Retro Grand Prix</a>
+  <a class="sub" href="../jetgolfcompanion/">Jet Golf Companion</a>
+  <a class="sub" href="../jetpencilprix/" aria-current="page">JetPencilPrix</a>
+  <span class="group">Soukromí</span>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/">Přehled zásad</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-retro-grand-prix/">Jet Retro Grand Prix</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-golf-companion/">Jet Golf Companion</a>
+  <span class="group">Odkazy</span>
+  <a class="sub" href="https://github.com/RdanhelDev">GitHub</a>
+</nav>
+<label for="nav-toggle" class="scrim"></label>
+<div class="checker" aria-hidden="true"></div>
+<!--/NAV-->
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <span class="eyebrow">Projekt</span>
+      <h1>JetPencilPrix</h1>
+      <p class="lead">Digitální verze klasické hry Formule na čtverečkovaném papíře. Žádné kostky, žádná náhoda – auto se pohybuje se setrvačností a o všem rozhoduje jen váš odhad, jak moc přidat plyn a kdy přibrzdit před zatáčkou.</p>
+      <div class="badges">
+        <span class="badge">Android</span>
+        <span class="badge">Čeština</span>
+        <span class="badge">Offline, bez reklam</span>
+        <span class="badge">AI soupeři</span>
+      </div>
+      <div class="actions">
+        <a class="btn" href="#hra">Jak se hraje</a>
+        <a class="btn ghost" href="#stav">Stav vývoje</a>
+      </div>
+    </div>
+
+    <section id="hra">
+      <h2>Hra v kostce</h2>
+      <p class="section-lead">Auta jezdí po průsečících čtverečkované sítě. Žádné kostky, žádné karty – jen vektorový pohyb se setrvačností, přesně podle klasických papírových pravidel.</p>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Setrvačnost</h3>
+          <p>Příští tah se odvozuje od toho posledního. Zrychlit, zpomalit nebo zatočit jde jen o krok – ne skokem.</p>
+        </div>
+        <div class="card">
+          <h3>Havárie</h3>
+          <p>Když žádný z možných tahů nezůstane na trati, auto havaruje a ztrácí rychlost i tah. Tři havárie znamenají konec závodu.</p>
+        </div>
+        <div class="card">
+          <h3>Kolo a cíl</h3>
+          <p>Kolo se počítá až po objetí většiny okruhu – čárou u startu tak nejde jen tak proskakovat tam a zpátky.</p>
+        </div>
+        <div class="card">
+          <h3>Blokování</h3>
+          <p>Jedno políčko, jedno auto. Havarovaný nebo pomalejší soupeř před vámi vám může zablokovat výhodnou trajektorii.</p>
+        </div>
+        <div class="card">
+          <h3>AI soupeři</h3>
+          <p>Kterýkoli ze čtyř startovních slotů může řídit počítač – stačí zapnout přepínač při nastavení nové hry.</p>
+        </div>
+        <div class="card">
+          <h3>Přehrání závodu</h3>
+          <p>Každý odjetý závod se uloží a jde kdykoli pustit tah po tahu znovu, včetně havárií a průjezdů cílem.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="setrvacnost">
+      <h2>Nejde jen o to, kam kliknete</h2>
+      <p class="section-lead">Klíčové pravidlo celé hry: příští políčko si nevybíráte volně, ale jen z devíti bodů odvozených od vaší aktuální rychlosti.</p>
+      <div class="split">
+        <div>
+          <p>Napřed se spočítá bod, kam by auto dojelo, kdyby jelo dál stejnou rychlostí a stejným směrem jako v předchozím tahu. Kolem tohoto bodu je devět políček – ten bod samotný a jeho osm sousedů, tedy změna rychlosti o jeden čtvereček v ose x i y. Z nich hráč vybere jedno klepnutím na mapu; hra rovnou skryje ta, která by vyjela z trati nebo skončila na jiném autě.</p>
+          <ul class="check">
+            <li>Čím rychleji jedete, tím dál dopředu jsou všechna políčka na výběr – a tím hůř se v zatáčce zastavuje.</li>
+            <li>Zpomalení nebo zrychlení o víc než jeden čtvereček za tah není možné – jen postupně, tah po tahu.</li>
+            <li>Poslední tah tak vždy určuje, jaké možnosti budete mít v tom příštím.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Devět políček</h3>
+          <ul>
+            <li>Odvozeno od <b>posledního posunu</b></li>
+            <li>Výběr <b>1 z 9 sousedních bodů</b></li>
+            <li>Změna rychlosti max. <b>o 1 čtvereček</b> na osu za tah</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="stav">
+      <h2>Stav vývoje</h2>
+      <p class="section-lead">Projekt je v raném vývoji – základní hra je hratelná, zbytek se doplňuje.</p>
+
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Hotovo</h3>
+          <ul class="check">
+            <li>vektorový pohyb se setrvačností a havárie</li>
+            <li>blokování mezi auty a počítání kol</li>
+            <li>AI soupeři pro libovolný ze čtyř slotů</li>
+            <li>ukládání a přehrávání odjetých závodů</li>
+            <li>sdílení logu z aplikace</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Na řadě</h3>
+          <ul class="check todo">
+            <li>další tratě</li>
+            <li>vlastní ikona a vizuální identita</li>
+            <li>vydání na Google Play</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="stahnout">
+      <h2>Ke stažení</h2>
+      <p class="section-lead">Hra je zatím v uzavřeném vývoji a veřejný build ještě není k dispozici. Odkaz na stažení přidám sem, jakmile bude co nabídnout.</p>
+      <div class="note" style="margin-top:18px">
+        JetPencilPrix je nezávislý hobby projekt inspirovaný klasickou papírovou hrou pro vektorové závodění – žádné spojení s existujícími komerčními značkami.
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Rdanhel Dev</span>
+    <a href="../">← Všechny projekty</a>
+  </div>
+</footer>
+
+</body>
+</html>
