@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jet Sea Battle – Rdanhel Dev</title>
+  <meta name="description" content="Jet Sea Battle: tahová námořní strategie pro dva hráče na čtvercové desce. Obklič soupeřovy lodě, potop vlajkovou loď nebo vplouvej do jeho přístavu. Android, zdarma, bez reklam.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<!--NAV-->
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/img/favicon.svg" alt="">Rdanhel Dev</a>
+    <label for="nav-toggle" class="burger" aria-hidden="true"><span></span></label>
+  </div>
+</header>
+<nav class="sidebar" aria-label="Hlavní menu">
+  <a class="brand" href="../"><img src="../assets/img/favicon.svg" alt="">Rdanhel Dev</a>
+  <a href="../">Domů</a>
+  <span class="group">Projekty</span>
+  <a class="sub" href="../jetretrograndprix/">Jet Retro Grand Prix</a>
+  <a class="sub" href="../jetgolfcompanion/">Jet Golf Companion</a>
+  <a class="sub" href="../jetpencilprix/">Jet Pencil Prix</a>
+  <a class="sub" href="../jetseabattle/" aria-current="page">Jet Sea Battle</a>
+  <span class="group">Soukromí</span>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/">Přehled zásad</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-retro-grand-prix/">Jet Retro Grand Prix</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-golf-companion/">Jet Golf Companion</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-pencil-prix/">Jet Pencil Prix</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-sea-battle/">Jet Sea Battle</a>
+  <span class="group">Odkazy</span>
+  <a class="sub" href="https://github.com/RdanhelDev">GitHub</a>
+</nav>
+<label for="nav-toggle" class="scrim"></label>
+<div class="checker" aria-hidden="true"></div>
+<!--/NAV-->
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <span class="eyebrow">Projekt</span>
+      <h1>Jet Sea Battle</h1>
+      <p class="lead">Tahová strategická hra pro dva hráče na čtvercové desce. Každý velí pěti lodím včetně vlajkové a cílem je přechytračit soupeře: obklíčit jeho plavidla, potopit vlajkovou loď nebo vplout do jeho přístavu. Nikdo tu nestřílí – rozhoduje promyšlené tažení.</p>
+      <div class="badges">
+        <span class="badge">Android</span>
+        <span class="badge">Čeština</span>
+        <span class="badge">Offline, bez reklam</span>
+        <span class="badge">Hráč vs AI · Hotseat</span>
+      </div>
+      <div class="actions">
+        <a class="btn" href="#hra">Jak se hraje</a>
+        <a class="btn ghost" href="#konec">Konec hry</a>
+      </div>
+    </div>
+
+    <section id="hra">
+      <h2>Hra v kostce</h2>
+      <p class="section-lead">Žádné kostky, žádná střelba. Každé kolo máte pět tahů a musíte je rozdělit tak, abyste obkličovali soupeře dřív, než on obklíčí vás.</p>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Pět tahů, jeden směr</h3>
+          <p>V kole máte pět tahů – jednou lodí o pět políček, nebo pěti loděmi o jedno. Během kola nejde u jedné lodi měnit směr, takže každý tah je potřeba dobře promyslet.</p>
+        </div>
+        <div class="card">
+          <h3>Obklíčení místo střelby</h3>
+          <p>Loď je zničena, jakmile ji obklíčí dvě soupeřova plavidla, z nichž se alespoň jedno dotýká celou hranou. Potopená loď zůstává na desce jako překážka.</p>
+        </div>
+        <div class="card">
+          <h3>Vlajková loď</h3>
+          <p>Její ztráta vás stojí jeden tah za kolo. Pokud vaše vlajková loď dopluje do soupeřova přístavu a soupeř ji hned v příštím tahu nepotopí, vyhráváte.</p>
+        </div>
+        <div class="card">
+          <h3>Hráč proti počítači</h3>
+          <p>Zahrajte si proti umělé inteligenci, která běží přímo v telefonu – bez internetu.</p>
+        </div>
+        <div class="card">
+          <h3>Dva hráči na jednom zařízení</h3>
+          <p>Režim hotseat: dva hráči se střídají u jednoho telefonu nebo tabletu.</p>
+        </div>
+        <div class="card">
+          <h3>Počítač proti počítači</h3>
+          <p>Ukázkový režim, ve kterém si můžete jen prohlížet, jak AI hraje sama proti sobě.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="konec">
+      <h2>Jak hra končí</h2>
+      <p class="section-lead">Vyhrát jde třemi způsoby – a každý vyžaduje jiný styl hry.</p>
+      <div class="split">
+        <div>
+          <ul class="check">
+            <li>Zničíte alespoň čtyři soupeřovy lodě včetně vlajkové.</li>
+            <li>Úspěšně obsadíte jeho přístav vlajkovou lodí – soupeř ji hned v příštím tahu nesmí potopit.</li>
+            <li>Zablokujete soupeře tak, že nemůže provést žádný tah.</li>
+          </ul>
+          <p>Desku můžete přibližovat a posouvat, hra vám ukazuje možné tahy a v záznamu si můžete projít průběh celé partie.</p>
+        </div>
+        <div class="card">
+          <h3>Pravidla v číslech</h3>
+          <ul>
+            <li><b>5 lodí</b> na hráče, jedna vlajková</li>
+            <li><b>5 tahů</b> za kolo</li>
+            <li>Ztráta vlajkové lodi = <b>−1 tah</b> za kolo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="stahnout">
+      <h2>Ke stažení</h2>
+      <p class="section-lead">Jet Sea Battle je zdarma, bez reklam a nepotřebuje internet ani žádná oprávnění. Aplikace se připravuje k vydání na Google Play.</p>
+
+      <div class="card">
+        <span class="tag">Připravuje se</span>
+        <h3>Android – Google Play</h3>
+        <p>Odkaz na Google Play přibude hned po vydání aplikace. Zásady ochrany osobních údajů jsou k dispozici už teď.</p>
+        <div class="actions" style="margin-top:18px">
+          <a class="btn ghost" href="../zasady-ochrany-osobnich-udaju/jet-sea-battle/">Zásady ochrany osobních údajů</a>
+        </div>
+      </div>
+
+      <div class="note" style="margin-top:18px">
+        Jet Sea Battle je hobby projekt vytvořený ve volném čase s pomocí AI agenta.
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Rdanhel Dev · <a href="../zasady-ochrany-osobnich-udaju/jet-sea-battle/">Zásady ochrany osobních údajů</a></span>
+    <a href="../">← Všechny projekty</a>
+  </div>
+</footer>
+
+</body>
+</html>
