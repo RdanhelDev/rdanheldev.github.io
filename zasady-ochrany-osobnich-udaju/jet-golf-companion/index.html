@@ -49,7 +49,7 @@
 
     <div class="prose">
       <p class="meta"><strong>Správce údajů:</strong> Rostislav Danhel (Rdanhel Dev), kontakt: <a href="mailto:rdanhel.dev@gmail.com">rdanhel.dev@gmail.com</a></p>
-      <p class="meta"><strong>Účinnost od:</strong> 2. 9. 2026</p>
+      <p class="meta"><strong>Účinnost od:</strong> 2. 9. 2026 (naposledy upraveno 4. 10. 2026 – doplněny fotky ran a záznamy puttingu)</p>
     </div>
 
     <section class="prose" style="border-top:0">
@@ -65,6 +65,8 @@
         <li><strong>Hry a skóre</strong> – průběh kola, skóre po jamkách, statistiky Brutto/Netto.</li>
         <li><strong>Poloha (GPS)</strong> – souřadnice jednotlivých ran zaznamenané během kola, uložené spolu s hrou a zobrazené na mapě jamky.</li>
         <li><strong>Fotografie</strong> – snímky pořízené fotoaparátem pro měření rychlosti greenu a vzdálenosti míčků. Analýza (detekce míčků) probíhá <strong>přímo v zařízení</strong> pomocí knihovny TensorFlow Lite. Snímky se nikam neodesílají.</li>
+        <li><strong>Fotky ran</strong> – volitelná fotografie pořízená tlačítkem „Foto“ u rány (připomínka polohy a uložení míčku). Fotka se zmenší, uloží do soukromého úložiště aplikace a je svázaná s GPS pozicí dané rány. Nikam se neodesílá.</li>
+        <li><strong>Záznamy puttingu</strong> – vzdálenosti jednotlivých patů a schematický nákres greenu. Lze je ručně exportovat do samostatného souboru JSON a zpět naimportovat.</li>
         <li><strong>Historie měření greenů</strong> – naměřené hodnoty Stimp, datum, použitý koeficient rampy.</li>
         <li><strong>Data importovaná z Garminu</strong> – kola, rány a skóre z ručně staženého souboru <code>golf-export.json</code>, dále přiřazení klubů a hřišť a ručně zadaný handicap/pohlaví k jednotlivým kolům.</li>
         <li><strong>Provozní protokoly (logy)</strong> – technický soubor <code>app_logs.txt</code> v úložišti aplikace pro řešení chyb. Zobrazit či sdílet ho lze pouze na váš pokyn v aplikaci.</li>
@@ -72,7 +74,7 @@
 
       <h3>Oprávnění aplikace a proč je potřebuje</h3>
       <ul>
-        <li><strong>Fotoaparát</strong> – pořízení snímků míčků pro měření. Snímky se zpracují lokálně.</li>
+        <li><strong>Fotoaparát</strong> – pořízení snímků míčků pro měření a volitelných fotek ran. Snímky se zpracují a uloží lokálně.</li>
         <li><strong>Poloha (přesná i přibližná)</strong> – záznam pozice ran během kola a jejich zobrazení na mapě jamky.</li>
         <li><strong>Služba na popředí / poloha na popředí + oznámení</strong> – aby průběžné zaznamenávání GPS fungovalo po celou dobu kola i při zhasnutém displeji; po dobu sledování je zobrazeno trvalé oznámení. Poloha se sleduje jen během aktivního kola, nikoli na pozadí mimo hru.</li>
         <li><strong>Internet</strong> – viz níže; využívá se pouze pro stažení veřejných scorekaret z webu cgf.cz na váš výslovný pokyn.</li>
@@ -81,6 +83,7 @@
       <h3>Připojení k internetu</h3>
       <p>Aplikace naváže spojení s internetem v jediném případě: když do ní <strong>sami vložíte odkaz na scorekartu na webu cgf.cz</strong> a spustíte její stažení. Požadavek pak směřuje na servery Českého golfového svazu (cgf.cz); těm se – jako při každé návštěvě webu – zpřístupní IP adresa vašeho zařízení. Aplikace přitom <strong>neodesílá žádné vaše osobní údaje</strong> ani obsah z aplikace.</p>
       <p>Aplikace <strong>neobsahuje</strong> reklamy, analytické nástroje (např. Google Analytics, Firebase), nástroje pro hlášení pádů ani žádné sledovací SDK třetích stran.</p>
+      <p>Úvodní tutoriál v aplikaci obsahuje odkazy na web aplikace a na uživatelskou příručku (PDF). Příručka je součástí aplikace a otevírá se v jiné aplikaci ve vašem zařízení; web aplikace se otevře ve vašem prohlížeči a až v něm platí zásady příslušného webu. Aplikace sama při tom žádná data neodesílá.</p>
       <p>Komunikace s hodinkami Garmin probíhá přes aplikaci <strong>Garmin Connect nainstalovanou ve vašem telefonu</strong> (Connect IQ Mobile SDK), nikoli přímým spojením aplikace se servery Garmin.</p>
 
       <h3>Záloha a přenos dat</h3>
