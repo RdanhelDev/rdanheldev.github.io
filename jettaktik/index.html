@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jet Taktik – Rdanhel Dev</title>
+  <meta name="description" content="Jet Taktik: tahová desková hra pro 2–4 hráče. Táhni kameny podle karet, sbírej barevné žetony a vyhazuj soupeře. Proti počítači, na jednom telefonu nebo na více telefonech v místnosti. Android, zdarma, bez reklam.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<!--NAV-->
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/img/favicon.svg" alt="">Rdanhel Dev</a>
+    <label for="nav-toggle" class="burger" aria-hidden="true"><span></span></label>
+  </div>
+</header>
+<nav class="sidebar" aria-label="Hlavní menu">
+  <a class="brand" href="../"><img src="../assets/img/favicon.svg" alt="">Rdanhel Dev</a>
+  <a href="../">Domů</a>
+  <span class="group">Projekty</span>
+  <a class="sub" href="../jetretrograndprix/">Jet Retro Grand Prix</a>
+  <a class="sub" href="../jetgolfcompanion/">Jet Golf Companion</a>
+  <a class="sub" href="../jetpencilprix/">Jet Pencil Prix</a>
+  <a class="sub" href="../jetseabattle/">Jet Sea Battle</a>
+  <a class="sub" href="../jettaktik/" aria-current="page">Jet Taktik</a>
+  <span class="group">Soukromí</span>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/">Přehled zásad</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-retro-grand-prix/">Jet Retro Grand Prix</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-golf-companion/">Jet Golf Companion</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-pencil-prix/">Jet Pencil Prix</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-sea-battle/">Jet Sea Battle</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-taktik/">Jet Taktik</a>
+  <span class="group">Odkazy</span>
+  <a class="sub" href="https://github.com/RdanhelDev">GitHub</a>
+</nav>
+<label for="nav-toggle" class="scrim"></label>
+<div class="checker" aria-hidden="true"></div>
+<!--/NAV-->
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <span class="eyebrow">Projekt</span>
+      <h1>Jet Taktik</h1>
+      <p class="lead">Tahová desková hra pro 2–4 hráče. Každý má devět kamenů a táhne s nimi podle otočených karet – kterým kamenem, to je na něm. Cestou sbírá barevné žetony, vyhazuje soupeřovy kameny a snaží se dojít co nejdál k protější cílové čáře. Body spočítá hra sama.</p>
+      <div class="badges">
+        <span class="badge">Android</span>
+        <span class="badge">Čeština · English</span>
+        <span class="badge">Bez reklam</span>
+        <span class="badge">2–4 hráči</span>
+        <span class="badge">Hráč vs AI · Hotseat · Hra v místnosti</span>
+      </div>
+      <div class="actions">
+        <a class="btn" href="#hra">Jak se hraje</a>
+        <a class="btn ghost" href="#rezimy">Režimy hry</a>
+      </div>
+    </div>
+
+    <section id="hra">
+      <h2>Hra v kostce</h2>
+      <p class="section-lead">Karta určuje, jak se táhne. Vy rozhodujete, kterým kamenem – a právě v tom je celá taktika.</p>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Tahy podle karet</h3>
+          <p>V balíčku je 60 karet s nakreslenou cestou kamene. Otočíte kartu a provedete tah libovolným ze svých kamenů. Když tah provést nejde, dostanete trestné body.</p>
+        </div>
+        <div class="card">
+          <h3>Žetony a barevné kombinace</h3>
+          <p>Na desce leží žetony v pěti barvách. Sbíráte je na polích, která má karta označená červeně. Nejvíc bodů dávají správné barevné kombinace podle hodnotící tabulky.</p>
+        </div>
+        <div class="card">
+          <h3>Vyhazování soupeřů</h3>
+          <p>Stejně jako žeton můžete sebrat i soupeřův kámen. Čím dál od své startovní čáry stál, tím víc bodů za něj dostanete. Na startovní a cílové čáře se vyhazovat nesmí.</p>
+        </div>
+        <div class="card">
+          <h3>Karta EXTRA</h3>
+          <p>Vezmete si další dvě karty a zahrajete je postupně. Volitelně si můžete zapnout výběr ze dvou karet, který dává hře víc taktiky a méně náhody.</p>
+        </div>
+        <div class="card">
+          <h3>Cesta do cíle</h3>
+          <p>Kámen, který dojde na cílovou čáru, tam zůstane a vrátí vám jeden ztracený kámen. Na konci hry se boduje i to, jak daleko vaše kameny došly.</p>
+        </div>
+        <div class="card">
+          <h3>Počítání za vás</h3>
+          <p>Hra hlídá pravidla, ukazuje možné tahy a průběžně počítá body. Nikdo nemusí nic sčítat ani zapisovat.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="rezimy">
+      <h2>Režimy hry</h2>
+      <p class="section-lead">Hrajte sami proti počítači, s rodinou u jednoho telefonu, nebo každý na svém telefonu u jednoho stolu.</p>
+      <div class="split">
+        <div>
+          <ul class="check">
+            <li><b>Proti počítači</b> – libovolné místo u stolu může obsadit počítač ve třech úrovních (lehký, střední, těžký).</li>
+            <li><b>Na jednom zařízení</b> – hráči si telefon nebo tablet předávají.</li>
+            <li><b>Hra v místnosti</b> – 2–4 telefony se spojí přímo mezi sebou přes Bluetooth a Wi-Fi, bez internetu a bez účtů. Každý vidí desku natočenou ke své straně.</li>
+          </ul>
+          <p>Rozehranou hru si aplikace pamatuje, takže můžete kdykoli pokračovat. V nastavení najdete i rychlost animací, potvrzování tahu a písmena barev na kamenech pro barvoslepé.</p>
+        </div>
+        <div class="card">
+          <h3>Hra v číslech</h3>
+          <ul>
+            <li><b>2–4 hráči</b>, každý s 9 kameny</li>
+            <li><b>60 karet</b> s cestou kamene</li>
+            <li><b>20 žetonů</b> v 5 barvách</li>
+            <li>Nemožný tah = <b>25 trestných bodů</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="stahnout">
+      <h2>Ke stažení</h2>
+      <p class="section-lead">Jet Taktik je zdarma a bez reklam. Na hru proti počítači a na jednom zařízení nepotřebuje internet ani žádná oprávnění. Aplikace se připravuje k vydání na Google Play.</p>
+
+      <div class="card">
+        <span class="tag">Připravuje se</span>
+        <h3>Android – Google Play</h3>
+        <p>Odkaz na Google Play přibude hned po vydání aplikace. Zásady ochrany osobních údajů jsou k dispozici už teď.</p>
+        <div class="actions" style="margin-top:18px">
+          <a class="btn ghost" href="../zasady-ochrany-osobnich-udaju/jet-taktik/">Zásady ochrany osobních údajů</a>
+        </div>
+      </div>
+
+      <div class="note" style="margin-top:18px">
+        Jet Taktik je hobby projekt vytvořený ve volném čase s pomocí AI agenta.
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Rdanhel Dev · <a href="../zasady-ochrany-osobnich-udaju/jet-taktik/">Zásady ochrany osobních údajů</a></span>
+    <a href="../">← Všechny projekty</a>
+  </div>
+</footer>
+
+</body>
+</html>
