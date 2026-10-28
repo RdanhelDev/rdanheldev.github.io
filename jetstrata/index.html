@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jet Strata – Rdanhel Dev</title>
+  <meta name="description" content="Jet Strata: izometrická retro střílečka v pixel-art stylu. Leť nad tratí, hlídej výšku po podlažích 0–9 a poraz tři Strážce. Android, zdarma, bez reklam a bez internetu.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<!--NAV-->
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/img/favicon.svg" alt="">Rdanhel Dev</a>
+    <label for="nav-toggle" class="burger" aria-hidden="true"><span></span></label>
+  </div>
+</header>
+<nav class="sidebar" aria-label="Hlavní menu">
+  <a class="brand" href="../"><img src="../assets/img/favicon.svg" alt="">Rdanhel Dev</a>
+  <a href="../">Domů</a>
+  <a href="../testovani/">Hledáme testery</a>
+  <span class="group">Projekty</span>
+  <a class="sub" href="../jetretrograndprix/">Jet Retro Grand Prix</a>
+  <a class="sub" href="../jetgolfcompanion/">Jet Golf Companion</a>
+  <a class="sub" href="../jetpencilprix/">Jet Pencil Prix</a>
+  <a class="sub" href="../jetseabattle/">Jet Sea Battle</a>
+  <a class="sub" href="../jettaktik/">Jet Taktik</a>
+  <a class="sub" href="../jetbrix/">Jet Brix</a>
+  <a class="sub" href="../jetstrata/" aria-current="page">Jet Strata</a>
+  <span class="group">Soukromí</span>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/">Přehled zásad</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-retro-grand-prix/">Jet Retro Grand Prix</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-golf-companion/">Jet Golf Companion</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-pencil-prix/">Jet Pencil Prix</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-sea-battle/">Jet Sea Battle</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-taktik/">Jet Taktik</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-brix/">Jet Brix</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-strata/">Jet Strata</a>
+  <span class="group">Odkazy</span>
+  <a class="sub" href="https://github.com/RdanhelDev">GitHub</a>
+</nav>
+<label for="nav-toggle" class="scrim"></label>
+<div class="checker" aria-hidden="true"></div>
+<!--/NAV-->
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <img src="../assets/img/jetstrata/ikona.png" width="112" height="112" alt="Ikona Jet Strata" style="border-radius:24px;margin-bottom:18px">
+      <span class="eyebrow">Projekt</span>
+      <h1>Jet Strata</h1>
+      <p class="lead">Izometrická retro střílečka v pixel-art stylu. Stíhačka letí po trati šikmo přes obrazovku a sama střílí. Ty řídíš, kam do strany a v jaké výšce: zdi z cihel, otvory v různých patrech, laserové bariéry a děla na sloupech prověří, jak dobře odhadneš výšku. Tři sektory, tři Strážci a s každým dalším okruhem rychleji.</p>
+      <div class="badges">
+        <span class="badge">Android</span>
+        <span class="badge">Čeština · English</span>
+        <span class="badge">Bez reklam</span>
+        <span class="badge">Offline</span>
+        <span class="badge">3 sektory · 3 Strážci</span>
+      </div>
+      <div class="actions">
+        <a class="btn" href="#hra">Jak se hraje</a>
+        <a class="btn ghost" href="#screenshoty">Screenshoty</a>
+      </div>
+    </div>
+
+    <section id="hra">
+      <h2>Hra v kostce</h2>
+      <p class="section-lead">Dva palce, deset podlaží a trať plná překážek.</p>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Ovládání dvěma palci</h3>
+          <p>Levý palec mění výšku, pravý řídí let do stran. Komu to víc sedí obráceně, prohodí palce v nastavení. Střílí se automaticky.</p>
+        </div>
+        <div class="card">
+          <h3>Výška po podlažích</h3>
+          <p>Letíš v podlažích 0 (těsně nad zemí) až 9 (strop). Výškoměr ve tvaru láhve ukazuje, kde právě jsi, stín se svislou čarou pomáhá odhadnout polohu. Kde je ve zdi díra, musíš poznat sám.</p>
+        </div>
+        <div class="card">
+          <h3>Soupeři střílí rovně</h3>
+          <p>Děla, stíhačky i roboti pálí vždy rovně ve své výšce. Před střelou se dá uhnout do strany nebo změnou podlaží. Děla na sloupech jde trefit jen z jejich podlaží.</p>
+        </div>
+        <div class="card">
+          <h3>Mince a power-upy</h3>
+          <p>Mince a sestřelení dávají body. Blesk zrychlí tvůj laser (palba začíná na minimu) a srdce přidá život – v každém sektoru dvě.</p>
+        </div>
+        <div class="card">
+          <h3>Strážci se štíty</h3>
+          <p>Na konci sektoru čeká Strážce. Zranitelné je jen jeho jádro a kolem krouží štíty: v první třetině boje jeden, pak dva a nakonec tři. Každý Strážce útočí jinak.</p>
+        </div>
+        <div class="card">
+          <h3>Pixel-art a retro zvuk</h3>
+          <p>Ručně laděné pixel-art sprity lodí, robotů a věží, zástavba kolem trati podle tématu sektoru a zvuky generované čipovým syntezátorem.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sektory">
+      <h2>Tři sektory, tři Strážci</h2>
+      <p class="section-lead">Každý sektor má vlastní krajinu, zdi a skladbu nepřátel. Po třetím se pokračuje znovu a rychleji.</p>
+      <div class="split">
+        <div>
+          <ul class="check">
+            <li><b>Továrna robotů</b> – cihlové zdi, haly a kouřící komíny, po zemi chodí malí roboti. Strážce: obrněný mech, který střílí salvy vedle sebe.</li>
+            <li><b>Město</b> – noční mrakodrapy, silnice a mosty mezi budovami, hodně stíhaček. Strážce: létající pevnost se sloupcem střel přes všechna podlaží – najdi mezeru.</li>
+            <li><b>Měsíční základna</b> – kopule, antény, krátery, raketová sila a miny. Strážce: měsíční tank s řadou střel přes celou šířku, který navíc vypouští miny.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Hra v číslech</h3>
+          <ul>
+            <li>Sektory <b>3 + okruhy dokola</b></li>
+            <li>Výška <b>10 podlaží (0–9)</b></li>
+            <li>Strážci <b>3, každý útočí jinak</b></li>
+            <li>Věže <b>5 druhů v každém sektoru</b></li>
+            <li>Životy <b>3 (až 9)</b></li>
+            <li>Oprávnění a internet <b>žádné</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenshoty">
+      <h2>Screenshoty</h2>
+      <div class="shots" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+        <figure><img src="../assets/img/jetstrata/uvod.jpg" width="1080" height="540" loading="lazy" alt="Úvodní obrazovka s ukázkovým průletem"><figcaption>Úvodní obrazovka</figcaption></figure>
+        <figure><img src="../assets/img/jetstrata/tovarna.jpg" width="1080" height="540" loading="lazy" alt="Továrna robotů s cihlovou zdí, děly a roboty"><figcaption>Sektor 1 – Továrna robotů</figcaption></figure>
+        <figure><img src="../assets/img/jetstrata/mesto.jpg" width="1080" height="540" loading="lazy" alt="Město s mrakodrapy, stíhačkami a dělem"><figcaption>Sektor 2 – Město</figcaption></figure>
+        <figure><img src="../assets/img/jetstrata/mesic.jpg" width="1080" height="540" loading="lazy" alt="Měsíční základna s laserovou bariérou a minami"><figcaption>Sektor 3 – Měsíční základna</figcaption></figure>
+        <figure><img src="../assets/img/jetstrata/strazce-mech.jpg" width="1080" height="540" loading="lazy" alt="Strážce Továrny – mech"><figcaption>Strážce – mech</figcaption></figure>
+        <figure><img src="../assets/img/jetstrata/strazce-pevnost.jpg" width="1080" height="540" loading="lazy" alt="Strážce Města – létající pevnost"><figcaption>Strážce – létající pevnost</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="stahnout">
+      <h2>Ke stažení</h2>
+      <p class="section-lead">Jet Strata je zdarma, bez reklam a bez nákupů v aplikaci. Nepotřebuje internet ani žádná oprávnění. Aplikace se připravuje k vydání na Google Play.</p>
+
+      <div class="card">
+        <span class="tag">Připravuje se</span>
+        <h3>Android – Google Play</h3>
+        <p>Odkaz na Google Play přibude hned po vydání aplikace. Zásady ochrany osobních údajů jsou k dispozici už teď.</p>
+        <div class="actions" style="margin-top:18px">
+          <a class="btn ghost" href="../zasady-ochrany-osobnich-udaju/jet-strata/">Zásady ochrany osobních údajů</a>
+        </div>
+      </div>
+
+      <div class="note" style="margin-top:18px">
+        Jet Strata je hobby projekt vytvořený ve volném čase s pomocí AI agenta.
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Rdanhel Dev · <a href="../zasady-ochrany-osobnich-udaju/jet-strata/">Zásady ochrany osobních údajů</a></span>
+    <a href="../">← Všechny projekty</a>
+  </div>
+</footer>
+
+</body>
+</html>
