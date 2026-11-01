@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jet Desítka – Rdanhel Dev</title>
-  <meta name="description" content="Jet Desítka: klidná číselná hra s dřevěnými kostkami. Spojuj čísla do desítky nebo tři a víc stejných, sbírej kaskády a hvězdy v 60 levelech a porovnej se s ostatními v denní výzvě. Android, bez reklam.">
+  <meta name="description" content="Jet Desítka: klidná číselná hra s dřevěnými kostkami. Spojuj čísla do desítky, tři a víc stejných nebo postupku, plánuj dopředu ve věži čísel, sbírej hvězdy v 60 levelech a porovnej se s ostatními v denní výzvě. Android, bez reklam.">
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
@@ -55,7 +55,7 @@
       <img src="../assets/img/jetdesitka/ikona.png" width="112" height="112" alt="Ikona Jet Desítka" style="border-radius:24px;margin-bottom:18px">
       <span class="eyebrow">Projekt</span>
       <h1>Jet Desítka</h1>
-      <p class="lead">Klidná číselná hra s dřevěnými kostkami a vypálenými čísly. Prstem spojuješ sousední čísla jako v osmisměrce, buď do součtu 10, nebo tři a víc stejných. Žádný časovač ani spěch, jen přemýšlení. Čím delší cesta, tím víc bodů, a když se po pádu sejdou stejná čísla, rozjede se kaskáda.</p>
+      <p class="lead">Klidná číselná hra s dřevěnými kostkami a vypálenými čísly. Prstem spojuješ sousední čísla jako v osmisměrce: do součtu 10, tři a víc stejných, nebo postupku 1-2-3. Všechna čísla čekají předem ve věži, takže si můžeš dopředu naplánovat, co spadne. Žádný časovač ani spěch, jen přemýšlení.</p>
       <div class="badges">
         <span class="badge">Android</span>
         <span class="badge">Čeština</span>
@@ -80,12 +80,24 @@
           <p>Táhni prstem přes sousední čísla do všech osmi směrů, i šikmo. Když dají dohromady přesně 10, zmizí. Za dvojici je 20 bodů, za čtyři čísla 160 a za šest čísel 960. Delší cesta se vyplatí.</p>
         </div>
         <div class="card">
-          <h3>Stejná čísla</h3>
-          <p>Tři a víc stejných čísel vedle sebe smíš spojit bez ohledu na součet. Čím víc jich je, tím větší bonus: 3 stejná dají 90 bodů, 4 stejná 240, 5 stejných 600 a 6 stejných 1 440.</p>
+          <h3>Stejná čísla a dvojice</h3>
+          <p>Tři a víc stejných čísel smíš spojit bez ohledu na součet. Kterékoli z nich můžeš nahradit dvěma čísly za sebou se stejným součtem: 7, 7, 2+5, 7 jsou čtyři sedmičky. 3 kusy dají 90 bodů, 4 kusy 240, 5 kusů 600, 6 kusů 1 440.</p>
+        </div>
+        <div class="card">
+          <h3>Postupka</h3>
+          <p>Aspoň tři čísla za sebou, každé o jedna vyšší nebo nižší: 1-2-3-4 nebo 6-5-4. Boduje se stejně jako stejná čísla, celá řada 1 až 9 dá přes 17 000 bodů.</p>
+        </div>
+        <div class="card">
+          <h3>Věž čísel</h3>
+          <p>Všechna čísla hry jsou připravená předem ve věži a nová nepřibývají. Lištou vpravo se posuneš nahoru, uvidíš, co tě čeká, a hrát můžeš kdekoliv, třeba si nahoře připravit kombinaci, která pak spadne dolů.</p>
+        </div>
+        <div class="card">
+          <h3>Mezera jako žolík</h3>
+          <p>Jak věž ubývá, nahoře vznikají prázdná místa. Cesta přes ně může projít, klidně přes celé prázdné sloupce: 2 úplně vlevo a 8 úplně vpravo je pořád desítka. Mezera sama nic nepřičítá.</p>
         </div>
         <div class="card">
           <h3>Kaskády</h3>
-          <p>Zbylá čísla spadnou dolů a shora přijdou nová. Když se pádem sejdou aspoň tři stejná vedle sebe, zmizí sama s násobitelem ×2, ×3, ×4… Jeden dobrý tah tak může přinést tisíce bodů.</p>
+          <p>Zbylá čísla spadnou dolů. Když se pádem sejdou aspoň tři stejná vedle sebe, zmizí sama s násobitelem ×2, ×3, ×4… Jeden dobrý tah tak může přinést tisíce bodů.</p>
         </div>
         <div class="card">
           <h3>Zámky a ×2</h3>
@@ -93,7 +105,7 @@
         </div>
         <div class="card">
           <h3>Bez spěchu</h3>
-          <p>Nehraje se na čas, ale na tahy. Hra se uloží po každém tahu, takže ji můžeš kdykoli zavřít a příště pokračovat od posledního tahu. Když nevíš kudy kam, nápověda ukáže jednu dobrou cestu.</p>
+          <p>Nehraje se na čas, ale na tahy. Hra se uloží po každém tahu, takže ji můžeš kdykoli zavřít a příště pokračovat. V historii najdeš všechny dohrané hry a jejich skóre.</p>
         </div>
         <div class="card">
           <h3>Dřevěný vzhled</h3>
@@ -104,22 +116,23 @@
 
     <section id="rezimy">
       <h2>Levely a denní výzva</h2>
-      <p class="section-lead">Postupně těžší levely pro sebe a jedna společná deska denně pro porovnání s ostatními.</p>
+      <p class="section-lead">Postupně těžší levely pro sebe a jedna společná věž denně pro porovnání s ostatními.</p>
       <div class="split">
         <div>
           <ul class="check">
             <li><b>60 levelů</b>: omezený počet tahů, cílové skóre a od čtvrtého levelu zámky. Za vyšší skóre jsou až tři hvězdy a splněný level odemkne další.</li>
-            <li><b>Denní výzva</b>: každý den nová deska, pro všechny hráče stejná, 30 tahů. Počítá se jen skóre, takže porovnání je férové.</li>
+            <li><b>Denní výzva</b>: každý den nová věž, pro všechny hráče stejná, 60 tahů. Počítá se jen skóre a všichni mají stejná čísla, takže porovnání je férové.</li>
+            <li><b>Historie</b>: přehled dohraných her s datem, skóre a hvězdami.</li>
             <li><b>Nápověda</b>: třikrát za hru ukáže jednu dobrou cestu.</li>
           </ul>
         </div>
         <div class="card">
           <h3>Hra v číslech</h3>
           <ul>
-            <li>Mřížka <b>7 × 9 kostek</b></li>
+            <li>Věž <b>7 sloupců, 27–34 řad</b></li>
             <li>Levely <b>60, až 3 hvězdy</b></li>
-            <li>Tahů v levelu <b>15–20</b></li>
-            <li>Denní výzva <b>30 tahů</b></li>
+            <li>Tahů v levelu <b>30–40</b></li>
+            <li>Denní výzva <b>60 tahů, věž 48 řad</b></li>
             <li>Kaskády <b>×2, ×3, ×4…</b></li>
             <li>Reklamy a nákupy <b>žádné</b></li>
           </ul>
@@ -129,36 +142,33 @@
 
     <section id="play-games">
       <h2>Google Play Games</h2>
-      <p class="section-lead">Aby bylo s kým se porovnávat, napojí se hra na herní služby Googlu. Přihlásíš se svým profilem Play Games, žádný další účet ani registrace nejsou potřeba.</p>
-      <div class="grid cols-3">
+      <p class="section-lead">Aby bylo s kým se porovnávat, je hra napojená na herní služby Googlu. Přihlásíš se svým profilem Play Games, žádný další účet ani registrace nejsou potřeba.</p>
+      <div class="grid cols-2">
         <div class="card">
-          <span class="tag">Připravuje se</span>
-          <h3>Žebříčky</h3>
-          <p>Denní žebříček pro denní výzvu a celkový žebříček za levely. Uvidíš, jak si vedeš proti přátelům i ostatním hráčům.</p>
+          <span class="tag">Hotovo</span>
+          <h3>Čtyři žebříčky</h3>
+          <p>Denní výzva, hvězdy celkem, nejlepší tah a součet skóre levelů. Uvidíš, jak si vedeš proti přátelům i ostatním hráčům.</p>
         </div>
         <div class="card">
-          <span class="tag">Připravuje se</span>
-          <h3>Uložení v cloudu</h3>
-          <p>Postup v levelech a rozehraná hra se uloží do tvého účtu Google. Na novém telefonu pak můžeš pokračovat v rozehrané hře.</p>
-        </div>
-        <div class="card">
-          <span class="tag">Připravuje se</span>
-          <h3>Úspěchy</h3>
-          <p>Odměny za první kaskádu ×3, šest stejných čísel v jedné cestě, týden denních výzev v řadě a další.</p>
+          <span class="tag">Možná později</span>
+          <h3>Úspěchy a uložení v cloudu</h3>
+          <p>Odměny za velké kaskády nebo dlouhé postupky a pokračování v rozehrané hře na jiném telefonu. Zatím se postup ukládá jen v telefonu.</p>
         </div>
       </div>
       <div class="note" style="margin-top:18px">
-        Přihlášení do Play Games bude dobrovolné. Hra půjde hrát i bez něj, jen bez žebříčků a cloudového uložení. Profil, žebříčky i uložené hry spravuje Google. <a href="../zasady-ochrany-osobnich-udaju/jet-desitka/">Podrobnosti v zásadách ochrany osobních údajů</a>.
+        Přihlášení do Play Games je dobrovolné. Hra jde hrát i bez něj, jen bez žebříčků. Profil a žebříčky spravuje Google. <a href="../zasady-ochrany-osobnich-udaju/jet-desitka/">Podrobnosti v zásadách ochrany osobních údajů</a>.
       </div>
     </section>
 
     <section id="screenshoty">
       <h2>Screenshoty</h2>
       <div class="shots">
-        <figure><img src="../assets/img/jetdesitka/uvod.jpg" width="540" height="960" loading="lazy" alt="Úvodní obrazovka s dřevěnými kostkami"><figcaption>Úvodní obrazovka</figcaption></figure>
-        <figure><img src="../assets/img/jetdesitka/hra.jpg" width="540" height="960" loading="lazy" alt="Hrací deska s dřevěnými kostkami, zámky a kostkou ×2"><figcaption>Hrací deska se zámky</figcaption></figure>
-        <figure><img src="../assets/img/jetdesitka/stejna-cisla.jpg" width="540" height="960" loading="lazy" alt="Tažení cesty přes tři sedmičky za 90 bodů"><figcaption>Tři stejná čísla</figcaption></figure>
-        <figure><img src="../assets/img/jetdesitka/levely.jpg" width="540" height="960" loading="lazy" alt="Výběr levelu s hvězdami"><figcaption>Výběr levelu</figcaption></figure>
+        <figure><img src="../assets/img/jetdesitka/uvod.jpg" width="540" height="960" loading="lazy" alt="Úvodní obrazovka s dřevěnými kostkami a tlačítkem Historie"><figcaption>Úvodní obrazovka</figcaption></figure>
+        <figure><img src="../assets/img/jetdesitka/vez.jpg" width="540" height="960" loading="lazy" alt="Věž čísel, cesta 2 + 3 + 1 + 4 = 10 za 160 bodů"><figcaption>Desítka ve věži</figcaption></figure>
+        <figure><img src="../assets/img/jetdesitka/dvojice.jpg" width="540" height="960" loading="lazy" alt="Cesta 7, 7, 2+5, 7 – čtyři sedmičky za 240 bodů"><figcaption>Sedmičky i s dvojicí</figcaption></figure>
+        <figure><img src="../assets/img/jetdesitka/mezera.jpg" width="540" height="960" loading="lazy" alt="Skoro vyčerpaná věž, postupka 4-5-6-7 vede přes dvě prázdná místa"><figcaption>Postupka přes mezery</figcaption></figure>
+        <figure><img src="../assets/img/jetdesitka/historie.jpg" width="540" height="960" loading="lazy" alt="Historie dohraných her se skóre a hvězdami"><figcaption>Historie her</figcaption></figure>
+        <figure><img src="../assets/img/jetdesitka/vysledek.jpg" width="540" height="960" loading="lazy" alt="Splněný level se třemi hvězdami"><figcaption>Splněný level</figcaption></figure>
       </div>
     </section>
 
