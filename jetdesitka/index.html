@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jet Desítka – Rdanhel Dev</title>
+  <meta name="description" content="Jet Desítka: klidná číselná hra s dřevěnými kostkami. Spojuj čísla do desítky nebo tři a víc stejných, sbírej kaskády a hvězdy v 60 levelech a porovnej se s ostatními v denní výzvě. Android, bez reklam.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<!--NAV-->
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/img/favicon.svg" alt="">Rdanhel Dev</a>
+    <label for="nav-toggle" class="burger" aria-hidden="true"><span></span></label>
+  </div>
+</header>
+<nav class="sidebar" aria-label="Hlavní menu">
+  <a class="brand" href="../"><img src="../assets/img/favicon.svg" alt="">Rdanhel Dev</a>
+  <a href="../">Domů</a>
+  <a href="../testovani/">Hledáme testery</a>
+  <span class="group">Projekty</span>
+  <a class="sub" href="../jetretrograndprix/">Jet Retro Grand Prix</a>
+  <a class="sub" href="../jetgolfcompanion/">Jet Golf Companion</a>
+  <a class="sub" href="../jetpencilprix/">Jet Pencil Prix</a>
+  <a class="sub" href="../jetseabattle/">Jet Sea Battle</a>
+  <a class="sub" href="../jettaktik/">Jet Taktik</a>
+  <a class="sub" href="../jetbrix/">Jet Brix</a>
+  <a class="sub" href="../jetstrata/">Jet Strata</a>
+  <a class="sub" href="../jetdesitka/" aria-current="page">Jet Desítka</a>
+  <span class="group">Soukromí</span>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/">Přehled zásad</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-retro-grand-prix/">Jet Retro Grand Prix</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-golf-companion/">Jet Golf Companion</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-pencil-prix/">Jet Pencil Prix</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-sea-battle/">Jet Sea Battle</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-taktik/">Jet Taktik</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-brix/">Jet Brix</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-strata/">Jet Strata</a>
+  <a class="sub" href="../zasady-ochrany-osobnich-udaju/jet-desitka/">Jet Desítka</a>
+  <span class="group">Odkazy</span>
+  <a class="sub" href="https://github.com/RdanhelDev">GitHub</a>
+</nav>
+<label for="nav-toggle" class="scrim"></label>
+<div class="checker" aria-hidden="true"></div>
+<!--/NAV-->
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <img src="../assets/img/jetdesitka/ikona.png" width="112" height="112" alt="Ikona Jet Desítka" style="border-radius:24px;margin-bottom:18px">
+      <span class="eyebrow">Projekt</span>
+      <h1>Jet Desítka</h1>
+      <p class="lead">Klidná číselná hra s dřevěnými kostkami a vypálenými čísly. Prstem spojuješ sousední čísla jako v osmisměrce, buď do součtu 10, nebo tři a víc stejných. Žádný časovač ani spěch, jen přemýšlení. Čím delší cesta, tím víc bodů, a když se po pádu sejdou stejná čísla, rozjede se kaskáda.</p>
+      <div class="badges">
+        <span class="badge">Android</span>
+        <span class="badge">Čeština</span>
+        <span class="badge">Bez reklam</span>
+        <span class="badge">Bez časovače</span>
+        <span class="badge">60 levelů · denní výzva</span>
+        <span class="badge">Google Play Games</span>
+      </div>
+      <div class="actions">
+        <a class="btn" href="#hra">Jak se hraje</a>
+        <a class="btn ghost" href="#screenshoty">Screenshoty</a>
+      </div>
+    </div>
+
+    <section id="hra">
+      <h2>Hra v kostce</h2>
+      <p class="section-lead">Jednoduchá pravidla, ale každý tah stojí za rozmyšlení.</p>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Desítka</h3>
+          <p>Táhni prstem přes sousední čísla do všech osmi směrů, i šikmo. Když dají dohromady přesně 10, zmizí. Za dvojici je 20 bodů, za čtyři čísla 160 a za šest čísel 960. Delší cesta se vyplatí.</p>
+        </div>
+        <div class="card">
+          <h3>Stejná čísla</h3>
+          <p>Tři a víc stejných čísel vedle sebe smíš spojit bez ohledu na součet. Čím víc jich je, tím větší bonus: 3 stejná dají 90 bodů, 4 stejná 240, 5 stejných 600 a 6 stejných 1 440.</p>
+        </div>
+        <div class="card">
+          <h3>Kaskády</h3>
+          <p>Zbylá čísla spadnou dolů a shora přijdou nová. Když se pádem sejdou aspoň tři stejná vedle sebe, zmizí sama s násobitelem ×2, ×3, ×4… Jeden dobrý tah tak může přinést tisíce bodů.</p>
+        </div>
+        <div class="card">
+          <h3>Zámky a ×2</h3>
+          <p>Tmavá kostka se železným zámkem nejde vybrat. Odemkne se, když vedle ní zmizí jiné číslo. Kostka s mosaznou intarzií zdvojnásobí body celé cesty.</p>
+        </div>
+        <div class="card">
+          <h3>Bez spěchu</h3>
+          <p>Nehraje se na čas, ale na tahy. Hra se uloží po každém tahu, takže ji můžeš kdykoli zavřít a příště pokračovat od posledního tahu. Když nevíš kudy kam, nápověda ukáže jednu dobrou cestu.</p>
+        </div>
+        <div class="card">
+          <h3>Dřevěný vzhled</h3>
+          <p>Kostky z masivu s letokruhy a vypálenými čísly na tmavém prkenném stole. Každé číslo má jiný odstín dřeva, od světlého javoru u jedničky po tmavý ořech u devítky, takže čísla poznáš i koutkem oka.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="rezimy">
+      <h2>Levely a denní výzva</h2>
+      <p class="section-lead">Postupně těžší levely pro sebe a jedna společná deska denně pro porovnání s ostatními.</p>
+      <div class="split">
+        <div>
+          <ul class="check">
+            <li><b>60 levelů</b>: omezený počet tahů, cílové skóre a od čtvrtého levelu zámky. Za vyšší skóre jsou až tři hvězdy a splněný level odemkne další.</li>
+            <li><b>Denní výzva</b>: každý den nová deska, pro všechny hráče stejná, 30 tahů. Počítá se jen skóre, takže porovnání je férové.</li>
+            <li><b>Nápověda</b>: třikrát za hru ukáže jednu dobrou cestu.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Hra v číslech</h3>
+          <ul>
+            <li>Mřížka <b>7 × 9 kostek</b></li>
+            <li>Levely <b>60, až 3 hvězdy</b></li>
+            <li>Tahů v levelu <b>15–20</b></li>
+            <li>Denní výzva <b>30 tahů</b></li>
+            <li>Kaskády <b>×2, ×3, ×4…</b></li>
+            <li>Reklamy a nákupy <b>žádné</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="play-games">
+      <h2>Google Play Games</h2>
+      <p class="section-lead">Aby bylo s kým se porovnávat, napojí se hra na herní služby Googlu. Přihlásíš se svým profilem Play Games, žádný další účet ani registrace nejsou potřeba.</p>
+      <div class="grid cols-3">
+        <div class="card">
+          <span class="tag">Připravuje se</span>
+          <h3>Žebříčky</h3>
+          <p>Denní žebříček pro denní výzvu a celkový žebříček za levely. Uvidíš, jak si vedeš proti přátelům i ostatním hráčům.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Připravuje se</span>
+          <h3>Uložení v cloudu</h3>
+          <p>Postup v levelech a rozehraná hra se uloží do tvého účtu Google. Na novém telefonu pak můžeš pokračovat v rozehrané hře.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Připravuje se</span>
+          <h3>Úspěchy</h3>
+          <p>Odměny za první kaskádu ×3, šest stejných čísel v jedné cestě, týden denních výzev v řadě a další.</p>
+        </div>
+      </div>
+      <div class="note" style="margin-top:18px">
+        Přihlášení do Play Games bude dobrovolné. Hra půjde hrát i bez něj, jen bez žebříčků a cloudového uložení. Profil, žebříčky i uložené hry spravuje Google. <a href="../zasady-ochrany-osobnich-udaju/jet-desitka/">Podrobnosti v zásadách ochrany osobních údajů</a>.
+      </div>
+    </section>
+
+    <section id="screenshoty">
+      <h2>Screenshoty</h2>
+      <div class="shots">
+        <figure><img src="../assets/img/jetdesitka/uvod.jpg" width="540" height="960" loading="lazy" alt="Úvodní obrazovka s dřevěnými kostkami"><figcaption>Úvodní obrazovka</figcaption></figure>
+        <figure><img src="../assets/img/jetdesitka/hra.jpg" width="540" height="960" loading="lazy" alt="Hrací deska s dřevěnými kostkami, zámky a kostkou ×2"><figcaption>Hrací deska se zámky</figcaption></figure>
+        <figure><img src="../assets/img/jetdesitka/stejna-cisla.jpg" width="540" height="960" loading="lazy" alt="Tažení cesty přes tři sedmičky za 90 bodů"><figcaption>Tři stejná čísla</figcaption></figure>
+        <figure><img src="../assets/img/jetdesitka/levely.jpg" width="540" height="960" loading="lazy" alt="Výběr levelu s hvězdami"><figcaption>Výběr levelu</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="stahnout">
+      <h2>Ke stažení</h2>
+      <p class="section-lead">Jet Desítka bude zdarma, bez reklam a bez nákupů v aplikaci. Hra se právě testuje a připravuje k vydání na Google Play.</p>
+
+      <div class="card">
+        <span class="tag">Ve vývoji</span>
+        <h3>Android – Google Play</h3>
+        <p>Odkaz na Google Play přibude po vydání aplikace. Zásady ochrany osobních údajů jsou k dispozici už teď.</p>
+        <div class="actions" style="margin-top:18px">
+          <a class="btn ghost" href="../zasady-ochrany-osobnich-udaju/jet-desitka/">Zásady ochrany osobních údajů</a>
+        </div>
+      </div>
+
+      <div class="note" style="margin-top:18px">
+        Jet Desítka je hobby projekt vytvořený ve volném čase s pomocí AI agenta.
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Rdanhel Dev · <a href="../zasady-ochrany-osobnich-udaju/jet-desitka/">Zásady ochrany osobních údajů</a></span>
+    <a href="../">← Všechny projekty</a>
+  </div>
+</footer>
+
+</body>
+</html>
